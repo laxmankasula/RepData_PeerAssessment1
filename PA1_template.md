@@ -1,9 +1,6 @@
 # Reproducible Research: Peer Assessment 1
 
 
-# Reproducible Research: Peer Assessment 1
-
-
 
 ## Loading and preprocessing the data
 ##### 1. Load the data (i.e. read.csv())
@@ -34,7 +31,7 @@ stepsByDay <- tapply(activityData$steps, activityData$date, sum, na.rm=TRUE)
 qplot(stepsByDay, xlab='Total steps per day', ylab='Frequency using binwith 500', binwidth=500)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 ##### 2. Calculate and report the mean and median total number of steps taken per day
 
@@ -62,7 +59,7 @@ ggplot(data=averageStepsPerTimeBlock, aes(x=interval, y=meanSteps)) +
     ylab("average number of steps taken") 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
 
 ##### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -100,7 +97,7 @@ stepsByDayImputed <- tapply(activityDataImputed$steps, activityDataImputed$date,
 qplot(stepsByDayImputed, xlab='Total steps per day (Imputed)', ylab='Frequency using binwith 500', binwidth=500)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
 
 ##### ... and Calculate and report the mean and median total number of steps taken per day. 
 
@@ -108,8 +105,8 @@ qplot(stepsByDayImputed, xlab='Total steps per day (Imputed)', ylab='Frequency u
 stepsByDayMeanImputed <- mean(stepsByDayImputed)
 stepsByDayMedianImputed <- median(stepsByDayImputed)
 ```
-* Mean (Imputed): 1.0766189\times 10^{4}
-* Median (Imputed):  1.0766189\times 10^{4}
+* Mean (Imputed): 1.0766189 &times; 10<sup>4</sup>
+* Median (Imputed):  1.0766189 &times; 10<sup>4</sup>
 
 
 ----
@@ -134,5 +131,5 @@ ggplot(averagedActivityDataImputed, aes(interval, steps)) +
     ylab("avarage number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
 
